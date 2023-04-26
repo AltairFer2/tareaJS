@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style media="screen">
+      img{
+        width: 30%;
+        position: absolute;
+        left: 33%;
+        top: 15%;
+      }
+    </style>
+   
+  </head>
+  <body>
+    <video autoplay muted loop id="player">
+      <source src="video/video.mp4" type="video/mp4" />
+    </video>
+
+    <div class="container">
+      <div class="content">
+        <nav class="navbar">
+          <h2 class="logo">Ing. en Software</h2>
+          <ul>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="soporte.html">Soporte tecnico</a></li>
+            <li><a href="seguridad.html">Seguridad informatica</a></li>
+            <li><a href="marketing.html">Marketing</a></li>
+            <li><a href="especialista.html">Especialista en base de datos</a></li>
+            <li><a href="dba.html">Administrador de base de datos</a></li>
+            <li><a href="integrantes.html">Integrantes</a></li>
+            <li><a href="#">Contactanos</a></li>
+            <li>
+              <span class="material-symbols-outlined icon"> search </span>
+            </li>
+          </ul>
+        </nav>
+
+        <h1>Formulario de contacto</h1>
+        <br>
+        <form method="post" action="correo.php" onsubmit="return validarEmail()">
+            <label for="nombre">Nombre:</label>
+            <br>
+            <input type="text" name="nombre" required><br>
+            <br>
+    
+            <label for="correo">Correo electrónico:</label><br>
+            <input type="email" name="correo" required size="30"><br>
+            <br>
+    
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea  name="mensaje" required></textarea><br>
+            <br>
+
+
+    
+            <input type="submit" value="Enviar">
+            <script src="vermail.js"></script>
+        </form>
+      </div>
+    </div>
+    <section>
+
+    </section>
+  </body>
+</html>
